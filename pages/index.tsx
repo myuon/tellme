@@ -7,7 +7,7 @@ const Index: React.FC = () => (
       <title>Tellme</title>
     </Head>
 
-    <h1>Hello, World!</h1>
+    <h1>Tellme</h1>
   </div>
 );
 

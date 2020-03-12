@@ -25,5 +25,11 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'react/prop-types': 'off',
+    'no-unused-vars': 0,
+    '@typescript-eslint/no-unused-vars': [
+      2, { args: 'none' }
+    ],
+    'react/self-closing-comp': 2
   },
 }
