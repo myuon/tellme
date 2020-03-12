@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "next/app";
 import { Global, css } from "@emotion/core";
 import "ress";
 
@@ -7,7 +8,7 @@ const MyApp: React.FC<{ Component: any; pageProps: any }> = ({
   pageProps
 }) => {
   return (
-    <>
+    <Container>
       <Global
         styles={css`
           h1 {
@@ -32,7 +33,7 @@ const MyApp: React.FC<{ Component: any; pageProps: any }> = ({
         `}
       />
       <Component {...pageProps} />
-    </>
+    </Container>
   );
 };
 
