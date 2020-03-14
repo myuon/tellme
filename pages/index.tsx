@@ -2,6 +2,8 @@ import Head from "next/head";
 import React from "react";
 import { css } from "@emotion/core";
 import { Avatar } from "../components/Avatar";
+import { CardPanel, Card } from "../components/Card";
+import { Horizon } from "../components/Horizon";
 import { Button } from "../components/Button";
 
 const Index: React.FC = () => (
@@ -12,13 +14,18 @@ const Index: React.FC = () => (
 
     <header>
       <h1>Tellme</h1>
+      <Horizon />
     </header>
 
-    <main>
+    <main
+      css={css`
+        margin-top: 1em;
+      `}
+    >
       <div
         css={css`
           width: 650px;
-          margin: auto;
+          margin: 2em auto;
         `}
       >
         <div
@@ -56,10 +63,44 @@ const Index: React.FC = () => (
               </h2>
               <p>Type Theoryと定理証明とジト目</p>
             </div>
-            <div>
-              <Button>みょんポイントを今すぐゲット</Button>
-            </div>
           </div>
+        </div>
+      </div>
+
+      <div
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+
+          & > div {
+            width: 33%;
+            padding: 0.2em;
+          }
+        `}
+      >
+        <div>
+          <Card
+            footer={
+              <>
+                <Button icon={"comment"}>5</Button>
+                <Button icon={"quote-left"} />
+              </>
+            }
+          >
+            Q. 描いてほしいキャラクターはいますか？
+          </Card>
+        </div>
+        <div>
+          <Card>ほげぴよ</Card>
+        </div>
+        <div>
+          <CardPanel>ほげぴよ</CardPanel>
+        </div>
+        <div>
+          <CardPanel>ほげぴよ</CardPanel>
+        </div>
+        <div>
+          <CardPanel>あああああああ</CardPanel>
         </div>
       </div>
     </main>
