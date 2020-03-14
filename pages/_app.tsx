@@ -11,6 +11,11 @@ const MyApp: React.FC<{ Component: any; pageProps: any }> = ({
     <Container>
       <Global
         styles={css`
+          html {
+            font-size: 16px;
+            color: #303030;
+          }
+
           h1 {
             font-size: 48px;
             line-height: 72px;
@@ -29,6 +34,11 @@ const MyApp: React.FC<{ Component: any; pageProps: any }> = ({
           p {
             font-size: 16px;
             line-height: 24px;
+          }
+
+          main {
+            max-width: 1280px;
+            margin: auto;
           }
         `}
       />
